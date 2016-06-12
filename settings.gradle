@@ -1,4 +1,6 @@
 rootProject.name = 'gradlegradle'
 include 'sub projekt 1'
 include 'sub projekt 2'
+include 'web'
+include 'aspectj'
 

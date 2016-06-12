@@ -1,0 +1,29 @@
+project.ext {
+    aspectjVersion = '1.8.9'
+}
+apply plugin: 'aspectj'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+buildscript {
+    repositories {
+        maven {
+            url "https://maven.eveoh.nl/content/repositories/releases"
+        }
+    }
+
+    dependencies {
+        classpath "nl.eveoh:gradle-aspectj:1.6"
+    }
+}
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    runtime 'org.aspectj:aspectjrt:1.8.9'
+}
